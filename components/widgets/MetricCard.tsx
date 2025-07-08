@@ -1,7 +1,7 @@
 import React from "react";
 import { RefreshCw } from "lucide-react";
 
-interface WidgetContainerProps {
+interface MetricCardProps {
   title: string;
   icon: React.ReactNode;
   children: React.ReactNode;
@@ -10,7 +10,7 @@ interface WidgetContainerProps {
   error?: string | null;
 }
 
-export const WidgetContainer: React.FC<WidgetContainerProps> = ({
+export const MetricCard: React.FC<MetricCardProps> = ({
   title,
   icon,
   children,

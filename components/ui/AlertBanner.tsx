@@ -1,11 +1,11 @@
 import React from "react";
 
-interface ErrorMessageProps {
+interface AlertBannerProps {
   message: string;
   icon?: React.ReactNode;
 }
 
-export const ErrorMessage: React.FC<ErrorMessageProps> = ({
+export const AlertBanner: React.FC<AlertBannerProps> = ({
   message,
   icon,
 }) => (

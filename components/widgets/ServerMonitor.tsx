@@ -2,11 +2,11 @@ import React, { useMemo } from "react";
 import { Activity } from "lucide-react";
 import { useDataFetcher } from "../../hooks/useApiData";
 import { Album, SystemHealthData } from "../../types/dashboard";
-import { ActivityIndicator } from "../ui/ActivityIndicator";
 import { MetricCard } from "./MetricCard";
+import { ActivityIndicator } from "../ui/ActivityIndicator";
 import { API_ENDPOINTS } from "@/lib/api-endpoints";
 
-export const SystemHealthWidget: React.FC = () => {
+export const ServerMonitor: React.FC = () => {
   const { data, loading, error, lastUpdated, refetch } = useDataFetcher<Album[]>(
     API_ENDPOINTS.ALBUMS
   );
@@ -44,7 +44,7 @@ export const SystemHealthWidget: React.FC = () => {
 
   return (
     <MetricCard
-      title="System Health"
+      title="Server Monitor"
       icon={<Activity className="w-6 h-6 text-purple-500" />}
       lastUpdated={lastUpdated}
       onRefresh={refetch}

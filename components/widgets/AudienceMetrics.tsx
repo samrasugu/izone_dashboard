@@ -15,7 +15,7 @@ import { MetricCard } from "./MetricCard";
 import { ActivityIndicator } from "../ui/ActivityIndicator";
 import { API_ENDPOINTS } from "@/lib/api-endpoints";
 
-export const UserStatsWidget: React.FC = () => {
+export const AudienceMetrics: React.FC = () => {
   const { data, loading, error, lastUpdated, refetch } = useDataFetcher<User[]>(
     API_ENDPOINTS.USERS
   );
