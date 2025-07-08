@@ -1,4 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IZONE Dashboard
+
+A dynamic analytics dashboard built with Next.js & TypeScript, featuring real-time data widgets with custom hooks and performance optimization.
+
+## Project Overview
+
+This dashboard simulates a SaaS platform analytics interface with multiple widgets that:
+- Fetch data from different mock APIs
+- Auto-refresh every 10 seconds
+- Display real-time analytics data
+- Use custom React hooks for data management
+- Implement performance optimizations
+
+## Features
+
+- **Multi-Widget Dashboard**: Three different widget types displaying various metrics
+- **Real-time Updates**: Auto-refresh functionality with 10-second intervals
+- **Custom Hooks**: Reusable hooks for data fetching and state management
+- **Performance Optimized**: Efficient rendering and data management
+- **Responsive Design**: Works on desktop and mobile devices
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **Icons**: Lucide React
 
 ## Getting Started
 
@@ -14,11 +41,13 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Widget Types
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **User Statistics Widget**: Displays user growth and activity metrics
+2. **Revenue Chart Widget**: Shows revenue trends over time
+3. **System Health Widget**: Monitors system performance indicators
 
 ## Learn More
 
