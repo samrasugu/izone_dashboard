@@ -1,65 +1,102 @@
 # IZONE Dashboard
 
-A dynamic analytics dashboard built with Next.js & TypeScript, featuring real-time data widgets with custom hooks and performance optimization.
-
-## Project Overview
-
-This dashboard simulates a SaaS platform analytics interface with multiple widgets that:
-- Fetch data from different mock APIs
-- Auto-refresh every 10 seconds
-- Display real-time analytics data
-- Use custom React hooks for data management
-- Implement performance optimizations
+A real-time SaaS analytics dashboard built with Next.js and TypeScript. Features four interactive widgets that fetch data from mock APIs and refresh every 10 seconds.
 
 ## Features
 
-- **Multi-Widget Dashboard**: Three different widget types displaying various metrics
-- **Real-time Updates**: Auto-refresh functionality with 10-second intervals
-- **Custom Hooks**: Reusable hooks for data fetching and state management
-- **Performance Optimized**: Efficient rendering and data management
-- **Responsive Design**: Works on desktop and mobile devices
+- **Real-time Data**: Four widgets auto-refresh every 10 seconds
+- **Custom Hooks**: Uses `useDataFetcher` hook for optimized data fetching
+- **Responsive Design**: Works on all screen sizes
+- **Modern UI**: Clean design system with CSS custom properties
+- **TypeScript**: Full type safety throughout the application
+- **Performance Optimized**: Efficient rendering and state management
 
 ## Tech Stack
 
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Charts**: Recharts
+- **Styling**: Tailwind CSS with custom CSS variables
+- **Charts**: Recharts for data visualization
 - **Icons**: Lucide React
+- **API**: JSONPlaceholder for mock data
+
+## Dashboard Widgets
+
+### 1. Audience Metrics
+Shows user statistics and engagement data. Displays user names with post and comment counts in a bar chart format.
+
+### 2. Sales Analytics  
+Revenue tracking with monthly trends. Features a line chart showing revenue growth over time with percentage indicators.
+
+### 3. Server Monitor
+System health monitoring dashboard. Shows CPU usage, memory consumption, and disk space with colored progress indicators.
+
+### 4. Growth Insights
+Performance trends and metrics. Displays key performance indicators with up/down trend arrows and percentage values.
+
+## Project Structure
+
+```
+├── app/
+│   ├── dashboard/          # Main dashboard page
+│   ├── globals.css         # Global styles and CSS variables
+│   └── layout.tsx          # Root layout
+├── components/
+│   ├── widgets/            # Dashboard widget components
+│   └── ui/                 # Reusable UI components
+├── hooks/
+│   └── useApiData.ts       # Custom data fetching hook
+├── lib/
+│   └── api-endpoints.ts    # Centralized API configuration
+└── types/
+    └── dashboard.ts        # TypeScript type definitions
+```
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository
+2. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the dashboard.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-## Widget Types
+4. Open [http://localhost:3000](http://localhost:3000) to view the dashboard
 
-1. **User Statistics Widget**: Displays user growth and activity metrics
-2. **Revenue Chart Widget**: Shows revenue trends over time
-3. **System Health Widget**: Monitors system performance indicators
+## API Integration
 
-## Learn More
+The dashboard uses JSONPlaceholder API endpoints:
+- Users: `/users` - For audience metrics
+- Posts: `/posts` - For sales analytics
+- Albums: `/albums` - For server monitoring
+- Comments: `/comments` - For growth insights
 
-To learn more about Next.js, take a look at the following resources:
+All API calls are centralized in `lib/api-endpoints.ts` for easy configuration.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The dashboard is built with modern React patterns:
+- Function components with hooks
+- TypeScript for type safety
+- Custom hooks for data fetching
+- Responsive design principles
+- Clean code architecture
 
-## Deploy on Vercel
+## Key Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `useDataFetcher`: Custom hook for API data management
+- `MetricCard`: Reusable widget container
+- `ActivityIndicator`: Loading state component
+- `AlertBanner`: Error handling component
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
