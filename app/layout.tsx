@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Izone Dashboard",
-  description: "SaaS Dashboard for Izone",
+  title: "IZONE Dashboard",
+  description: "SaaS Dashboard for IZONE",
 };
 
 export default function RootLayout({

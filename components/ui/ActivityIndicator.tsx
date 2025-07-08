@@ -1,11 +1,11 @@
 import React from "react";
 
-interface LoadingSpinnerProps {
+interface ActivityIndicatorProps {
   size?: "sm" | "md" | "lg";
   color?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+export const ActivityIndicator: React.FC<ActivityIndicatorProps> = ({
   size = "md",
   color = "border-blue-500",
 }) => {
