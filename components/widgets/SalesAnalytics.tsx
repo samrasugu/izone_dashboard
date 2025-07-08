@@ -15,7 +15,7 @@ import { MetricCard } from "./MetricCard";
 import { ActivityIndicator } from "../ui/ActivityIndicator";
 import { API_ENDPOINTS } from "@/lib/api-endpoints";
 
-export const RevenueWidget: React.FC = () => {
+export const SalesAnalytics: React.FC = () => {
   const { data, loading, error, lastUpdated, refetch } = useDataFetcher<Post[]>(
     API_ENDPOINTS.POSTS
   );

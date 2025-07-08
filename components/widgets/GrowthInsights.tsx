@@ -6,7 +6,7 @@ import { MetricCard } from "./MetricCard";
 import { ActivityIndicator } from "../ui/ActivityIndicator";
 import { API_ENDPOINTS } from "@/lib/api-endpoints";
 
-export const PerformanceTrendsWidget: React.FC = () => {
+export const GrowthInsights: React.FC = () => {
   const { data, loading, error, lastUpdated, refetch } = useDataFetcher<Comment[]>(
     API_ENDPOINTS.COMMENTS
   );
@@ -32,7 +32,7 @@ export const PerformanceTrendsWidget: React.FC = () => {
 
   return (
     <MetricCard
-      title="Performance Trends"
+      title="Growth Insights"
       icon={<TrendingUp className="w-6 h-6 text-orange-500" />}
       lastUpdated={lastUpdated}
       onRefresh={refetch}
